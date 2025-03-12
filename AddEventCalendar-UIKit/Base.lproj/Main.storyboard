@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AddEventCalendar_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="IQKeyboardToolbar" customModule="IQKeyboardToolbar">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfg-Qq-iSJ">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abg-pn-mSR">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="912"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDS-fQ-7eS">
+                                                <rect key="frame" x="16" y="70" width="229" height="36"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdY-jB-aJA">
+                                                <rect key="frame" x="16" y="126" width="97" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMh-Y6-zIT" customClass="FSCalendar">
+                                                <rect key="frame" x="16" y="158" width="361" height="330"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="330" id="GcT-uP-JSL"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fih-kH-fpS">
+                                                <rect key="frame" x="16" y="518" width="361" height="190"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7b-BJ-gVf">
+                                                        <rect key="frame" x="16.000000000000007" y="16" width="109.66666666666669" height="21.666666666666671"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Event Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SNI-dT-t2b">
+                                                        <rect key="frame" x="16" y="53.666666666666629" width="329" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="MMW-TL-RNi"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04y-sd-Gyg">
+                                                        <rect key="frame" x="16" y="113.66666666666663" width="329" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="4bv-ZH-dMY"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="plus.circle.fill" catalog="system" title=" Add to Calendar">
+                                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="addBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="icK-hI-gzD"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="04y-sd-Gyg" firstAttribute="leading" secondItem="fih-kH-fpS" secondAttribute="leading" constant="16" id="2ye-1a-wm1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="SNI-dT-t2b" secondAttribute="trailing" constant="16" id="4An-tt-D05"/>
+                                                    <constraint firstItem="SNI-dT-t2b" firstAttribute="leading" secondItem="fih-kH-fpS" secondAttribute="leading" constant="16" id="6NR-3n-FlI"/>
+                                                    <constraint firstItem="d7b-BJ-gVf" firstAttribute="leading" secondItem="fih-kH-fpS" secondAttribute="leading" constant="16" id="7P9-5T-o4v"/>
+                                                    <constraint firstAttribute="trailing" secondItem="04y-sd-Gyg" secondAttribute="trailing" constant="16" id="J0U-Hc-0b0"/>
+                                                    <constraint firstItem="04y-sd-Gyg" firstAttribute="top" secondItem="SNI-dT-t2b" secondAttribute="bottom" constant="10" id="SqQ-lR-eHA"/>
+                                                    <constraint firstItem="d7b-BJ-gVf" firstAttribute="top" secondItem="fih-kH-fpS" secondAttribute="top" constant="16" id="ado-i2-72P"/>
+                                                    <constraint firstAttribute="height" constant="190" id="c0u-Hf-Vef"/>
+                                                    <constraint firstItem="SNI-dT-t2b" firstAttribute="top" secondItem="d7b-BJ-gVf" secondAttribute="bottom" constant="16" id="fAi-7u-0t4"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="qDS-fQ-7eS" firstAttribute="leading" secondItem="abg-pn-mSR" secondAttribute="leading" constant="16" id="0rE-w1-xly"/>
+                                            <constraint firstItem="fih-kH-fpS" firstAttribute="leading" secondItem="abg-pn-mSR" secondAttribute="leading" constant="16" id="2DH-Lt-a22"/>
+                                            <constraint firstItem="fih-kH-fpS" firstAttribute="top" secondItem="ZMh-Y6-zIT" secondAttribute="bottom" constant="30" id="3kX-iw-4En"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZMh-Y6-zIT" secondAttribute="trailing" constant="16" id="H1y-uo-GmE"/>
+                                            <constraint firstItem="TdY-jB-aJA" firstAttribute="leading" secondItem="abg-pn-mSR" secondAttribute="leading" constant="16" id="LDd-bA-2t8"/>
+                                            <constraint firstItem="qDS-fQ-7eS" firstAttribute="top" secondItem="abg-pn-mSR" secondAttribute="top" constant="70" id="Lli-HL-p1z"/>
+                                            <constraint firstItem="TdY-jB-aJA" firstAttribute="top" secondItem="qDS-fQ-7eS" secondAttribute="bottom" constant="20" id="MS0-Gf-oKQ"/>
+                                            <constraint firstItem="ZMh-Y6-zIT" firstAttribute="leading" secondItem="abg-pn-mSR" secondAttribute="leading" constant="16" id="X5K-Eb-eYz"/>
+                                            <constraint firstAttribute="trailing" secondItem="fih-kH-fpS" secondAttribute="trailing" constant="16" id="ciA-cK-okz"/>
+                                            <constraint firstItem="ZMh-Y6-zIT" firstAttribute="top" secondItem="TdY-jB-aJA" secondAttribute="bottom" constant="10" id="haD-4V-BNc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="abg-pn-mSR" secondAttribute="trailing" id="2SB-uT-WAS"/>
+                                    <constraint firstAttribute="bottom" secondItem="abg-pn-mSR" secondAttribute="bottom" id="AHu-AN-usI"/>
+                                    <constraint firstItem="abg-pn-mSR" firstAttribute="top" secondItem="wfg-Qq-iSJ" secondAttribute="top" id="kzx-Yy-e2v"/>
+                                    <constraint firstItem="abg-pn-mSR" firstAttribute="leading" secondItem="wfg-Qq-iSJ" secondAttribute="leading" id="nsA-nJ-HSU"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="abg-pn-mSR" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" constant="60" id="8Zg-2T-AvE"/>
+                            <constraint firstItem="wfg-Qq-iSJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JNF-YR-LFv"/>
+                            <constraint firstItem="abg-pn-mSR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="U3S-iv-Yjh"/>
+                            <constraint firstAttribute="bottom" secondItem="wfg-Qq-iSJ" secondAttribute="bottom" id="Ysi-z4-8om"/>
+                            <constraint firstItem="wfg-Qq-iSJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="i4D-fo-Hlc"/>
+                            <constraint firstItem="wfg-Qq-iSJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nSJ-Be-h8z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="EventView" destination="fih-kH-fpS" id="a33-Ml-TlK"/>
+                        <outlet property="btnAdd" destination="04y-sd-Gyg" id="ahb-n3-YMv"/>
+                        <outlet property="calendarView" destination="ZMh-Y6-zIT" id="Zw5-Lb-ucT"/>
+                        <outlet property="txtEvent" destination="SNI-dT-t2b" id="KHY-aV-N7v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4137" y="-115"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
